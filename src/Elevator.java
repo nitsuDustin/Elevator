@@ -11,6 +11,7 @@ public class Elevator implements FloorState{
     }
 
     public void press1(){
+        //buttonPress(1);
         System.out.println("1 pressed");
         floor.setFloor(1);
         printElevator();
@@ -18,6 +19,7 @@ public class Elevator implements FloorState{
         //return this.currentFloor = 1;
     }
     public void press2(){
+        //buttonPress(2);
         System.out.println("2 pressed");
         floor.setFloor(2);
         printElevator();
@@ -25,12 +27,22 @@ public class Elevator implements FloorState{
         //return this.currentFloor = 2;
     }
     public void press3(){
+        //buttonPress(3);
         System.out.println("3 pressed");
         floor.setFloor(3);
         printElevator();
         this.currentFloor = 3;
         //return this.currentFloor = 3;
     }
+
+    public buttonPress(int newFloor) {
+        System.out.println(newFloor + " pressed");
+        floor.setFloor(newFloor);
+        printElevator();
+        this.currentFloor(newFloor);
+        //return this.currentFloor = newFloor;
+    }
+
     public void printElevator(){
         //TODO:Check current floor
         boolean check = door.checkFloor(floor.getFloor(), currentFloor);

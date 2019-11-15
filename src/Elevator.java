@@ -28,18 +28,17 @@ public class Elevator implements FloorState{
         System.out.println("3 pressed");
         floor.setFloor(3);
         printElevator();
-        this.currentFlor = 3;
+        this.currentFloor = 3;
         //return this.currentFloor = 3;
     }
     public void printElevator(){
         //TODO:Check current floor
         boolean check = door.checkFloor(floor.getFloor(), currentFloor);
-        String temp = "";
         if(check == true){
             System.out.println("*ding* The elevator arrives at Floor " + String.valueOf(floor.getFloor()) + "\nDoors are open");
         }
         if(check == false){
-            System.out.println("Doors are closed\nNothing happened");
+            System.out.println("Doors are closed\nNothing happens");
         }
     }
 }

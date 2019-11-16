@@ -1,3 +1,6 @@
+package Classes;
+import State.*;
+
 public class Door {
     private DoorState state;
     

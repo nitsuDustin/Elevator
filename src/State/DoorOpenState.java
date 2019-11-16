@@ -1,3 +1,6 @@
+package State;
+import Classes.*;
+
 public class DoorOpenState implements DoorState {
     
     public void doAction(Door door) {

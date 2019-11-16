@@ -1,3 +1,7 @@
+package Mediator;
+import Classes.*;
+import State.*;
+
 public class ElevatorMediator implements Mediator {
     private Floor floor;
     private Door door;

@@ -1,4 +1,3 @@
-import java.util.*;
 public class Floor{
     //Stack currentFloor = new Stack<>();
     //Current floor will be either 1, 2 or 3

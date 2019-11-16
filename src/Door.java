@@ -1,15 +1,11 @@
-import java.util.*;
 public class Door implements Mediator{
-    //This will be called in the Elevator class
-    //destination will be floor.getFloor()
-    //current will be currentFloor
-    
     private DoorState state;
     
     public Door() {
-        state = null;
+        state = new DoorOpenState();
     }
 
+    // Most likely not needed. Also why in this class? Shouldnt it be in floor?
     @Override
     public boolean checkFloor(int destination, int current) {
         //True = different floor so, print the *ding* The elevator arrived at floor __
@@ -24,7 +20,7 @@ public class Door implements Mediator{
         this.state = state;
     }
 
-    public getDoorState() {
+    public DoorState getDoorState() {
         return state;
     }
 

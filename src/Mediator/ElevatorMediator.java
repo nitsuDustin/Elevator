@@ -45,4 +45,36 @@ public class ElevatorMediator implements Mediator {
             System.out.println("Going down...");
         }
     }
+
+    public Floor getFloor() {
+        return floor;
+    } 
+
+    public void setFloor(Floor floor) {
+        this.floor = floor;
+    }
+
+    public Door getDoor() {
+        return door;
+    }
+
+    public void setDoor(Door door) {
+        this.door = door;
+    }
+
+    public DoorOpenState getDoorOpenState() {
+        return open;
+    }
+
+    public void setDoorOpenState(DoorOpenState open) {
+        this.open = open;
+    }
+
+    public DoorClosedState getDoorCloseState() {
+        return close;
+    }
+
+    public void setDoorCloseState(DoorClosedState close) {
+        this.close = close;
+    }
 }

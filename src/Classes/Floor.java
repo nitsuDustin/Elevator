@@ -1,10 +1,9 @@
 package Classes;
 
 public class Floor{
-    //Stack currentFloor = new Stack<>();
-    //Current floor will be either 1, 2 or 3
-    int currentFloor;
-    public Floor(){
+    private int currentFloor;
+    
+    public Floor() {
         this.currentFloor = 1;
     }
     
@@ -14,7 +13,5 @@ public class Floor{
     public void setFloor(int floor) {
         this.currentFloor = floor;
     }
-    
-    
 
 }

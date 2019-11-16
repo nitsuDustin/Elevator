@@ -24,4 +24,12 @@ public class Elevator implements FloorState{
     public void buttonPress(int newFloor) {
         mediator.press(newFloor);
     }
+
+    public Mediator getMediator() {
+        return mediator;
+    }
+
+    public void setMediator(Mediator mediator) {
+        this.mediator = mediator;
+    }
 }

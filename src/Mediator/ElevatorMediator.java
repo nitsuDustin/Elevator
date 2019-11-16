@@ -5,14 +5,12 @@ import State.*;
 public class ElevatorMediator implements Mediator {
     private Floor floor;
     private Door door;
-    private DoorOpenState open;
-    private DoorClosedState close;
+    private DoorState state;
 
     public ElevatorMediator() {
         this.floor = new Floor();
         this.door = new Door();
-        this.open = new DoorOpenState();
-        this.close = new DoorClosedState();
+        this.state = null;
     }
 
     public void press(int newFloor) {
@@ -29,12 +27,14 @@ public class ElevatorMediator implements Mediator {
     }
 
     public void onClose() {
-        close.doAction(door);
+        state = new DoorOpenState();
+        state.doAction(door);
         System.out.println(door.toString());
     }
 
     public void onOpen() {
-        open.doAction(door);
+        state = new DoorOpenState();
+        state.doAction(door);
         System.out.println(door.toString());
     }
 
@@ -62,19 +62,11 @@ public class ElevatorMediator implements Mediator {
         this.door = door;
     }
 
-    public DoorOpenState getDoorOpenState() {
-        return open;
+    public DoorState getDoorState() {
+        return state;
     }
 
-    public void setDoorOpenState(DoorOpenState open) {
-        this.open = open;
-    }
-
-    public DoorClosedState getDoorCloseState() {
-        return close;
-    }
-
-    public void setDoorCloseState(DoorClosedState close) {
-        this.close = close;
+    public void setDoorState(DoorState state) {
+        this.state = state;
     }
 }

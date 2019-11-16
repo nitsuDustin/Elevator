@@ -1,10 +1,10 @@
-public class Med {
+public class ElevatorMediator implements Mediator {
     private Floor floor;
     private Door door;
     private DoorOpenState open;
     private DoorClosedState close;
 
-    public Med() {
+    public ElevatorMediator() {
         this.floor = new Floor();
         this.door = new Door();
         this.open = new DoorOpenState();

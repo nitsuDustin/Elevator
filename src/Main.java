@@ -8,7 +8,7 @@ public class Main{
         elevator.press1();
 
 
-        System.out.println("Testing the state of the door");
+        System.out.println("\nTesting the state of the door");
         Door door = new Door();
         
         DoorOpenState open = new DoorOpenState();

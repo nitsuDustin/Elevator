@@ -1,8 +1,8 @@
 public class Elevator implements FloorState{
-    private Med mediator;
+    private Mediator mediator;
 
     public Elevator() {
-        this.mediator = new Med();
+        this.mediator = new ElevatorMediator();
     }
 
     public void press1() {

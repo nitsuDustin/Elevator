@@ -4,7 +4,12 @@ public class Door implements Mediator{
     //destination will be floor.getFloor()
     //current will be currentFloor
     
-    /* Open or closed variable? */
+    private DoorState state;
+    
+    public Door() {
+        state = null;
+    }
+
     @Override
     public boolean checkFloor(int destination, int current) {
         //True = different floor so, print the *ding* The elevator arrived at floor __
@@ -13,5 +18,17 @@ public class Door implements Mediator{
             return false;
         else
             return true;
+    }
+
+    public void setDoorState(DoorState state) {
+        this.state = state;
+    }
+
+    public getDoorState() {
+        return state;
+    }
+
+    public String toString() {
+        return state.toString();
     }
 }

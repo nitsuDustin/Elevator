@@ -14,10 +14,10 @@ public class ElevatorMediator implements Mediator {
     }
 
     public void press(int newFloor) {
+        System.out.println(newFloor + " pressed");
         if (newFloor == floor.getFloor()) {
             System.out.println("Nothing happens");
         } else {
-            System.out.println(newFloor + " pressed");
             onClose();
             goingUpOrDown(newFloor);
             floor.setFloor(newFloor);

@@ -8,18 +8,5 @@ public class Main{
         elevator.press3();
         elevator.press3();
         elevator.press1();
-
-
-        System.out.println("\nTesting the state of the door");
-        Door door = new Door();
-        
-        DoorOpenState open = new DoorOpenState();
-        open.doAction(door);
-        System.out.println(door.toString());
-
-        DoorClosedState close = new DoorClosedState();
-        close.doAction(door);
-        System.out.println(door.toString());
-
     }
 }
